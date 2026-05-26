@@ -45,16 +45,28 @@ int main(){
     }
     cout << endl;
 
-    // Reversing the LL
-    Node* prev = nullptr;
-    temp = head;
-    while(temp != nullptr){
-        Node* next = temp->next;
-        temp->next = prev;
-        prev = temp;
-        temp = next;
-    }
-    head = prev;
+    // // Reversing the LL by pointers
+    // Node* prev = nullptr;
+    // temp = head;
+    // while(temp != nullptr){
+    //     Node* next = temp->next;
+    //     temp->next = prev;
+    //     prev = temp;
+    //     temp = next;
+    // }
+    // head = prev;
+
+    // Reversing LL by recursion
+    function<Node*(Node*)> reverse = [&](Node* node){
+        if(node == nullptr || node->next == nullptr){
+            return node;
+        }
+        Node* newHead = reverse(node->next);
+        node->next->next = node;
+        node->next = nullptr;
+        return newHead;
+    };
+    head = reverse(head);
 
     // Printing the reversed LL
     cout << "Reversed LL: ";
