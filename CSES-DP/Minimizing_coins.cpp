@@ -18,7 +18,7 @@ int main(){
 
     for(int i = 1; i <= x; i++){
         for(int j : coins){
-            if(i - j >= 0){
+            if(i - j >= 0  && dp[i - j] != INF){
                 dp[i] = min(dp[i], dp[i - j] + 1);
             }
         }
