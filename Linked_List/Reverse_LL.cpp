@@ -29,7 +29,7 @@ int main(){
         cin >> arr[i];
     }
 
-    Node* head = new Node(arr[0]);\
+    Node* head = new Node(arr[0]);
     Node* temp = head;
     for(int i = 1; i < n; i++){
         temp->next = new Node(arr[i]);
