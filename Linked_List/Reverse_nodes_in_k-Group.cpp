@@ -27,7 +27,8 @@ Node* reverseKGroup(Node* head, int k){
         Node* check = prevTail;
         for(int i = 0; i < k; i++){
             check = check->next;
-            if(check == nullptr) return dummy->next;
+            if(check == nullptr) 
+                return dummy->next;
         }
 
         Node* curr = prevTail->next;
@@ -78,8 +79,8 @@ int main(){
     head = reverseKGroup(head, k);
     temp = head;
     while (temp != nullptr){
-        cout << temp->data;
-        if (temp->next != nullptr) cout;
+        cout << temp->data << " ";
+        if (temp->next != nullptr) cout << " ";
         temp = temp->next;
     }
     cout << endl;
