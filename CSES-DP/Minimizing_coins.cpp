@@ -7,7 +7,7 @@ int main(){
     cin >> n >> x;
 
     vector<int> coins(n);
-    cout << "Enter the coin denominations: ";
+    cout << "Enter the coin values: ";
     for(int i = 0; i < n; i++){
         cin >> coins[i];
     }
