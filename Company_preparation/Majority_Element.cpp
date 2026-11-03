@@ -55,9 +55,6 @@ int main(){
     else{
         cout << "No majority element found." << endl;
     }
-    // explain this logic in detail
-    // The algorithm works by maintaining a candidate for the majority element and a count of its occurrences. It iterates through the array, updating the candidate and count based on the current element. If the current element is the same as the candidate, the count is incremented. If it's different, the count is decremented. If the count reaches zero, a new candidate is selected.
-
     
 
     return 0;
